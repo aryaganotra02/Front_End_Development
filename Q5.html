@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display browser properties</title>
+    <style>
+        h1, div{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Screen Object</h1>
+    <div id="sample"></div>
+    <div id="sample1"></div>
+    <h1>Window Object</h1>
+    <div id="window"></div>
+    <div id="window1"></div>
+    <script>
+        document.getElementById("sample").innerHTML="Height="+screen.height+ " and Width="+screen.width;
+        document.getElementById("sample1").innerHTML="Avail Height="+screen.availHeight+ " and Avail Width="+screen.availWidth;
+        document.getElementById("window").innerHTML="Inner Height="+window.innerHeight+ " and Inner Width="+window.innerWidth;
+        document.getElementById("window1").innerHTML="Outer Height="+window.outerheight+ " and Outer Width="+window.outerWidth;
+    </script>
+    
+</body>
+</html>
