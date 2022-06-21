@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            background-color: lightskyblue;
+            border: 2px solid white;
+            border-radius: 25px;
+            height: 230px;
+            width: 670px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 200px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #btn{
+            padding: 5px;
+            height: 35px;
+            width: 120px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            cursor: pointer;
+            margin-top: 70px;
+            border-radius: 8px;
+        }
+        #output{
+            margin-top: 40px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="btn">Click Here</button>
+        <div id="output">Click The Button To Generate Random Quotes</div>
+    </div>
+</body>
+<script>
+    let btn=document.getElementById('btn');
+    let output=document.getElementById('output');
+    let quotes=
+    [
+    '“The purpose of our lives is to be happy.” — Dalai Lama',
+    '“Life is what happens when you’re busy making other plans.” — John Lennon',
+    '“Get busy living or get busy dying.” — Stephen King',
+    '“You only live once, but if you do it right, once is enough.” — Mae West',
+    '“Many of lifes failures are people who did not realize how close they were to success when they gave up.”– Thomas A. Edison',
+    '“If you want to live a happy life, tie it to a goal, not to people or things.”– Albert Einstein',
+    '“Never let the fear of striking out keep you from playing the game.”– Babe Ruth',
+    '“Money and success don’t change people; they merely amplify what is already there.” — Will Smith',
+    '“Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.” – Steve Jobs'
+    ];
+    btn.addEventListener('click', function(){
+        var randomQuote=quotes[Math.floor(Math.random()*quotes.length)]
+        output.innerHTML=randomQuote;
+    });
+</script>
+</html>
