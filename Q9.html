@@ -1,0 +1,37 @@
+<!--Q9.Draw a semi arc using HTML5 canvas.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000" height="500"></canvas>
+    <script>
+        
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+    
+        ctx.beginPath();
+        ctx.arc(100,75,50,0,0.5*Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(350,75,50,0,1*Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(600,75,50,0,1.5*Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(850,75,50,0,2*Math.PI);
+        ctx.stroke();
+    
+    </script>
+    
+</body>
+</html>
+
