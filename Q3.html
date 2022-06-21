@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Change On Mouse Event</title>
+    <style>
+        h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Changing Image On Mouse Hovering</h2>
+    <img id="img" onmouseover="setNewImage()" onmouseout="setOldImage()" src="img1.png" width="300"/>
+</body>
+<script>
+    function setNewImage()
+    {
+        document.getElementById("img").src="img2.jpg";
+    }
+    function setOldImage()
+    {
+        document.getElementById("img").src="img1.png";
+    }
+</script>
+</html>
