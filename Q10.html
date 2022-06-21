@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Time</title>
+    <style>
+        .container{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            font-size: 22px;
+            margin-top: 250px;
+            background:lightsalmon;
+            padding: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Current Time is <span id="time"></span>
+    </div>
+    <script>
+        setInterval(updateTime, 1000);//This means update time after every 1000 milliseconds i.e 1 sec
+
+        function updateTime() {
+            time.innerHTML = new Date();
+        }
+
+    </script>
+</body>
+
+</html>
+</body>
+</html>
