@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Images</title>
+    <style>
+        h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    <script>
+        function changeImage(){
+            var number=Math.floor(Math.random()*4);
+            var imageSrc=['1.jpg','2.jpg','3.avif','4.webp'];
+
+            document.getElementById('image').src=imageSrc[number];
+        }
+    </script>
+</head>
+<body>
+    <h2>Random Images On MouseOver</h2>
+    <p>
+    <img src="1.jpg" width="500px" onmouseover="changeImage()" id="image"/>
+    </p>
+    
+</body>
+</html>
