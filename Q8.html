@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo Box</title>
+    <style>
+        .container{
+            margin-top: 150px;
+            margin-left: 150px;
+        }
+        .group{
+            float: left;
+        }
+        .group label{
+            display: block;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+        }
+        select{
+            border: 1px solid black;
+            height: 40px;
+            width: 200px;
+            padding: 0 10px;
+            margin-right: 15px;
+
+        }
+    </style>
+    <script>
+    
+        function populate(s1,s2)
+        {
+            var s1=document.getElementById(s1);
+            var s2=document.getElementsById(s2);
+    
+            s2.innerHTML= "";
+    
+            if(s1.value=="india"){
+                var optionArray=['dehli|Dehli', 'mumbai|Mumbai', 'bangalore|Bangalore', 
+                'hyderabad|Hyderabad'];
+    
+            }
+            else if(s2.value=="usa"){
+                var optionArray=['ohio|Ohio', 'california|California', 'texas|Texas',
+            'georgia|Georgia'];
+            }
+            
+        for(var option in optionArray){
+            var pair=optionArray[option].split("|");
+            var newoption=document.createElement("option");
+            
+            newoption.value=pair[0];
+            newoption.innerHTML=pair[1];
+            s2.options.add(newoption);
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="group">
+        <label for="">Country</label>
+        <select name="select1" id="select1" onchange="populate(this.id, 'select2')">
+        <option value=""> -- Choose Country -- </option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+    </select>
+    </div>
+
+    <div class="group">
+        <label for="">State</label>
+        <select name="select2" id="select2"></select>
+    </div>
+    </div>
+</body>
+</html>
