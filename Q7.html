@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfering Values</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(function()
+    {
+        $("#button1").click(function()
+        {
+            $("#box1 option:selected").each(function()
+            {
+                $(this).remove().appendTo("#box2");
+            });
+        });
+    });
+    $(function()
+    {
+        $("#button2").click(function()
+        {
+            $("box2 option:selected").each(function()
+            {
+                $(this).remove().appendTo("#box1");
+            });
+        });
+    });
+</script>
+</head>
+<body>
+    <h1>Transfer Values From One List Box To Another</h1>
+    <h2>Using JQuery</h2>
+    <table border="1">
+        <tr>
+            <th>ListBox 1</th>
+            <th>Transfer Values</th>
+            <th>ListBox 2</th>
+        </tr>
+        <tr>
+            <td><select id="box1" multiple="multiple">
+                <option>Mango</option>
+                <option>Lichi</option>
+                <option>WaterMelon</option>
+                <option>Kiwi</option>
+            </select>
+        </td>
+        <td>
+            <input type="button" id="button1" value=">>"/>
+            <input type="button" id="button2" value="<<"/>
+        </td>
+        <td>
+            <select id="box2" multiple="multiple"></select>
+        </td>
+        </tr>
+
+    </table>
+</body>
+</html>
